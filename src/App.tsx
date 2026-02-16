@@ -1,3 +1,19 @@
-export default function App() {
-  return <h1>Let's get started!</h1>;
+import CourseGoal from "./components/CourseGoal";
+import Header from "./components/Header";
+import goalsImg from './assets/goals.jpg';
+
+const App = () => {
+  return (
+    <main>
+      <Header image={{ src: goalsImg, alt: 'A list of goals' }}>
+        <h1>Your Course Goals</h1>
+      </Header>
+      <CourseGoal
+        title="Learn Teact + TS"
+        description="Learn it from ground up"
+      />
+    </main>
+  );
 }
+
+export default App
