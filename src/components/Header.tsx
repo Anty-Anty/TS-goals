@@ -9,11 +9,11 @@ type HeaderProps = {
     };
 };
 
-const Header = (props: HeaderProps) => {
+const Header = ({image, children}: HeaderProps) => {
     return (
         <header>
-            <img src={props.image.src} alt={props.image.alt} />
-            {props.children}
+            <img src={image.src} alt={image.alt} />
+            {children}
         </header>
     )
 };
