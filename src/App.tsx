@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-import CourseGoal from "./components/CourseGoal";
+import CourseGoalList from "./components/CourseGoalList";
 import Header from "./components/Header";
+
+
 import goalsImg from './assets/goals.jpg';
 
-type CourseGoalType = {
+export type CourseGoalType = {
   title: string;
   description: string;
   id: number;
@@ -26,6 +28,10 @@ const App = () => {
     });
   }
 
+  const deleteGoalHandler = (id: number) => {
+    setGoals(prevGoals => prevGoals.filter((goal) => goal.id !== id));
+  };
+
   return (
     <main>
       <Header image={{ src: goalsImg, alt: 'A list of goals' }}>
@@ -34,16 +40,10 @@ const App = () => {
 
       <button onClick={addGoalHandler}>Add Goal</button>
 
-      <ul>
-        {goals.map((goal) => (
-          <li key={goal.id}>
-            <CourseGoal
-              title={goal.title}
-              description={goal.description}
-            />
-          </li>
-        ))}
-      </ul>
+      <CourseGoalList
+        goals = {goals}
+        onDeleteGoal = {deleteGoalHandler}
+      />
 
     </main>
   );

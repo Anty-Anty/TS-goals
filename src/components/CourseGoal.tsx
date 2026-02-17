@@ -1,6 +1,8 @@
 interface CourseGoalProps {
     title: string;
-    description: string
+    description: string;
+    id: number;
+    onDelete: (id:number) => void;
 }
 
 const CourseGoal = (props: CourseGoalProps) => {
@@ -12,7 +14,7 @@ const CourseGoal = (props: CourseGoalProps) => {
                 <p>{props.description}</p>
             </div>
 
-            <button>
+            <button onClick={() => props.onDelete(props.id)}>
                 Delete
             </button>
 
