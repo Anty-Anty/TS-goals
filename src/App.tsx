@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import CourseGoalList from "./components/CourseGoalList";
 import Header from "./components/Header";
+import NewGoal from "./components/NewGoal";
 
 
 import goalsImg from './assets/goals.jpg';
@@ -38,7 +39,7 @@ const App = () => {
         <h1>Your Course Goals</h1>
       </Header>
 
-      <button onClick={addGoalHandler}>Add Goal</button>
+      <NewGoal/>
 
       <CourseGoalList
         goals = {goals}
