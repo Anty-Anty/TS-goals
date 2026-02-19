@@ -94,10 +94,10 @@ D- isplays all created goals
 ## Screenshots
 
 ### Main Dashboard
-![Dashboard](public/screenshots/dashboard.webp)
+![Dashboard](public/images/dashboard.webp)
 
 ### Add Goal
-![Add Goal](public/screenshots/add-goal.webp)
+![Add Goal](public/images/add-goal.webp)
 
 ### Warning
-![Warning](public/screenshots/warning.webp)
+![Warning](public/images/warning.webp)
